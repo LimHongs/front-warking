@@ -1,0 +1,109 @@
+
+/*    css:
+         content 크기를 조절가능
+         padding : 자기만에 영역을 가지고누 이동할수도있다
+         border: 자기만에 영역에서 움직임 */
+:root{
+    --primaryColor:green;
+    --errorColor:orange;
+}
+
+
+html{
+    /* content-box 는 영역의 크기를 지정할때 패팅과 테두리를 제외한 content크기만을 계산
+       border-box는 영역의 크기를 지정할때 패딩과 테두리를 포함한 content크기를 계산 */
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center; 
+    /* 수직중앙정렬 */
+    justify-content: center;
+    /* 수평중앙중렬 */
+    min-height: 100vh;
+    /* 뷰포트의높이를 100%를 최소높이로 지정 */
+    background-color: white;
+}
+/* display:flex 를먹인테그는 부모테그가 되고 div테그는 자식테그가 됩니다. */
+
+#wrapper{
+    width: 420px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,2);
+    /* box-shodw 의 역활은 영역의 그림자 생성 */
+    /* 4px는 수직방향으로 그림자 생성 */
+    /* 14px는 그림자의 블러값(그림자의 흐림도)를 적용 */
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputGroup{
+    padding: 8px 12px;
+/* 8px은 패딩 위아래로 8px씩
+    12px은 패딩을 왼쪽 오른쪽으로 12px
+*/
+}
+.inputGroup{
+    display: block; 
+    /* display: 영역과 공간을 차지한다 */
+    /* display: inline 영역과 너비를 가지지 못한다, 가로와 위에속성을 변경하지못함 */
+    padding: 12px 0;
+}
+
+.inputGroup input{
+    display: block;
+    width: 93%;
+    padding: 12px;
+    border: 2px solid #e2e2e2;
+    font-size: 16px;
+}
+
+.inputGroup input:focus{
+
+    outline: none;
+    /* 테두리 안보이게하는거 */
+    border-color: #777;
+    /* 테두리색깔 */
+}
+
+.inputGroup.valid input{
+    border-color: var(--primaryColor);
+    /* 테두리 색깔이 초록색 */
+    /* .valid는 자바스크립트로 가상의선택자가능 */
+}
+
+.inputGroup.invalid input{
+    border-color: var(--errorColor);
+    /* 테두리 색깔이 초록색 */
+    /* .valid는 자바스크립트로 가상의선택자가능 */
+    visibility: visible;
+}
+
+.inputGroup .helpText{
+    display: block;
+    padding-top: 8px;
+}
+
+.inputGroup .vali.helpText{
+    visibility: hidden;
+}
+
+.inputGroup.invalid.helpText{
+    color: var(--errorColor);
+}
+
+#wrapper button{
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    color: white;
+    cursor: pointer;
+}
