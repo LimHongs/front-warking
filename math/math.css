@@ -1,0 +1,80 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 테두리를 포함한 모든 테그요소들에 크기를 보여준다 */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(103, 103, 55);
+    background-color: white;
+    animation:fadein 1.5s;
+}
+
+@keyframes fadein{
+    from{
+        opacity:0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+
+.container{
+    display: inline-block;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: ();
+    font-size: 300%;
+    color: rgb(115, 115, 230);
+}
+
+calculator{
+    display: inline-block;
+}
+
+input{
+    direction: ltr;
+    /* 입력방향을 왼쪽에서 오른쪽으로 설정 */
+    background-color: aliceblue;
+    width: 80vw;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.316);
+    border: 2px solid rgb(179, 171, 171);
+    border-radius: 0.5rem;
+}
+
+table{
+    margin: 0 auto;
+    /* 주로 display속성이 block인 값을 가진 테그요소들을 가운데로 옮기고 싶을떄 이용*/
+
+}
+
+button{
+    background-color: #ececec;
+    width: 20vw;
+    height: 10vw;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    color: #2c3e50;
+    transition: box-shadow 03s ease,transform 0.2s ease;
+}
+
+button:active{
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 15);
+}
+/* 버튼을 눌렀을때 */
+
+button:hover{
+    transform: scale(0.95);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
