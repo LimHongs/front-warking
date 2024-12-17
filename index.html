@@ -8,39 +8,41 @@
          span: 글씨 inline 개념 
     -->
          <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="wrapper" class="wrapper">                                
-        <form id="registationForm" class="registationForm">
-            <h2>회원등록</h2>
-            <div class="inputGroup">
-            <label for="nickname" class="nicknameInput">사용자이름</label>
-            <input type="text" id="nickname" class="nicknameInput">
-            <span class="helperText">알림</span>
-        </div>
-        <div class="inputGroup">
-            <label for="userEmail">이메일주소</label>
-            <input type="email" id="email" class="emailinput">
-            <span class="helperText">알림</span>
-        </div>
-        <div class="inputGroup">
-            <label for="userPassword">비밀번호</label>
-            <input type="password" id="userPassword" class="passwordinput">
-            <span class="helperText">알림</span>
-        </div>
-        <div class="inputGroup">
-            <label for="userPassword2">비밀번호 확인</label>
-            <input type="password2" id="userPassword2" class="password2input">
-            <span>알림</span>
-        </div>
+        </head>
+        <body>
+            <div id="wrapper" class="wrapper">                                
+                <form id="registationForm" class="registationForm">
+                    <h2>회원등록</h2>
+                    <div class="inputGroup">
+                        <label for="nickname" class="nicknameInput">사용자이름</label>
+                        <input type="text" id="nickname" class="nicknameInput" autocomplete="new-name">
+                        <span class="helperText"></span>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="email">이메일주소</label>
+                        <input type="email" id="email" class="emailInput" autocomplete="new-email">
+                        <span class="helperText"></span>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="userPassword">비밀번호</label>
+                        <input type="password" id="userPassword" class="passwordinput" autocomplete="new-password">
+                        <span class="helperText"></span>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="userPassword">비밀번호 확인</label>
+                        <input type="password" id="confirmPassword" class="confirmPassword" autocomplete="new-confirmInput">
+                        <span class="helperText"></span>
+                    </div>
         <div class="inputGroup">
             <label for="phone">휴대폰전화</label>
-            <input type="tel" id="phone" class="phoneinput">
-            <span class="helperText">010-1234-5678</span>
+            <input type="tel" id="phone" class="phoneinput" autocomplete="new-phone">
+            <span class="helperText"></span>
         </div>
         <button type="submit">등록 완료</button>
-        </form>
-        <!-- form 테그는 웹브라우저에서 웹서버로 데이터를 넘기고자 할때 input 태그와 같이 작성해주는 태그입니다. -->
-    </div>
+    </form>
+    <!-- form 테그는 웹브라우저에서 웹서버로 데이터를 넘기고자 할때 input 태그와 같이 작성해주는 태그입니다. -->
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

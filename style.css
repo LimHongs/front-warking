@@ -82,16 +82,17 @@ h2{
     visibility: visible;
 }
 
-.inputGroup .helpText{
+.inputGroup .helperText{
     display: block;
     padding-top: 8px;
 }
 
-.inputGroup .vali.helpText{
+.inputGroup.valid .helperText {
     visibility: hidden;
 }
 
-.inputGroup.invalid.helpText{
+.inputGroup.invalid .helperText {
+    visibility: visible;
     color: var(--errorColor);
 }
 
